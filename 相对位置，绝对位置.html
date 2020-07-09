@@ -1,0 +1,59 @@
+<!-- relative positioning -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        position:relative;
+        top: 30px;
+        left:50px;
+        /* top means from the top,块左上角顶端 */
+        /* left 意思是靠左顶端 */
+        /* 以元素左顶的元素为主 */
+        /* 很简单 */
+        /* 在对父级元素进行设置的时候，设置成relative可以进行对子元素绝对位置进行改变「从原本的左上角」 */
+    }
+    p.abosolute {
+        position: absolute;
+        top: 30px;
+        left:50px;
+    }
+    /* 这个是距离低端和，左端分别30px和50px */
+@media (min-width: 1200px) {
+    p {
+        color:purple;
+        background-color: green;
+        width: 400px;
+        height:400px;
+        display: block;
+    }
+    p:active,p:hover {
+        background-color: black;
+        border:3px red solid;
+        }
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    p {
+        color:purple;
+        background-color: green;
+        width: 200px;
+        height:200px;
+        display: block;
+    }
+    p:active,p:hover {
+        background-color: white;
+        border:3px black solid;
+        }
+}
+</style>
+<body>
+    <p>
+        i am a good boy
+    </p>
+</body>
+</html>
